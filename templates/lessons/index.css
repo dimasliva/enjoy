@@ -1,0 +1,198 @@
+* {
+  font-size: 16px;
+}
+body {
+  margin: 0;
+  background-color: black;
+  color: red;
+  font-family: "Courier New", Courier, monospace;
+  overflow-x: hidden;
+  background-size: 400% 400%;
+}
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+.code {
+  position: absolute;
+  white-space: nowrap;
+  opacity: 0.8;
+  animation: fall linear infinite;
+  font-size: 20px;
+  transform: translateY(0);
+}
+@keyframes fall {
+  0% {
+    top: -10%;
+    opacity: 1;
+  }
+  100% {
+    top: 175%;
+    opacity: 1;
+  }
+}
+
+h1 {
+  color: black;
+}
+/* голова */
+.wrapper {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fafafa;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  z-index: 2;
+}
+/* лого */
+.header__logo-img {
+  width: 200px;
+  height: auto;
+  border-radius: 10%;
+}
+/* кнопка */
+.header__singout-btn {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.disable {
+  pointer-events: none;
+  cursor: not-allowed;  
+}
+
+
+@media (hover: hover) {
+  .header__singout-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.header__singout-btn:active {
+  transform: translateY(1px); /* Эффект нажатия */
+}
+
+/* Вверхние кнопки */
+.main {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  z-index: 2;
+}
+.main__pages {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+/* главные кнопки */
+.main__page-btn {
+  text-decoration: none;
+  padding: 5px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  color: #3498db;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.main__page-btn:hover {
+  background-color: #3498db;
+  color: white;
+  border: 2px solid #2980b9;
+}
+
+.main__page-btn:focus {
+  outline: none;
+}
+
+/* lessons_link  and lessons */
+.lessons {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lessons__link {
+  text-decoration: none;
+  padding: 5px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  color: #3498db;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lessons__link:hover {
+  background-color: #3498db;
+  color: white;
+} /* Пример стилей для уроков */
+.lessons {
+  list-style-type: none; /* Убираем маркеры списка */
+  padding: 0; /* Убираем отступы */
+}
+
+.lesson-item {
+  width: 100%;
+  margin: 10px 0; /* Отступы между элементами */
+}
+
+.lesson-item button {
+  width: 100%;
+  cursor: pointer;
+  text-align: start;
+  text-decoration: none;
+  color: #007bff;
+  font-size: 16px;
+  padding: 0 10px; /* Отступы */
+  border: 1px solid #007bff; /* Рамка */
+  border-radius: 5px; /* Закругленные углы */
+  transition: background-color 0.3s; /* Плавный переход */
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  align-items: center;
+}
+.lock_img {
+  display: flex;
+  background-image: url('./img/lock.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100px;
+  border-radius: 1px;
+  height: 100%;
+}
+.lesson-item button:hover {
+  background-color: #007bff; /* Цвет фона при наведении */
+  color: white; /* Цвет текста при наведении */
+}

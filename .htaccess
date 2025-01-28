@@ -1,0 +1,8 @@
+Options FollowSymLinks
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+FallbackResource /index.php
+
+RewriteRule !\.(js|txt|gif|jpg|png)$ index.php?$1 [L,QSA]

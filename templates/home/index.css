@@ -1,0 +1,112 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+button,
+input {
+  font-size: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  color: red;
+  font-family: "Courier New", Courier, monospace;
+}
+.container {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+.code {
+  position: absolute;
+  white-space: nowrap;
+  opacity: 0.8;
+  animation: fall linear infinite;
+}
+@keyframes fall {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* тело */
+.header__main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: white;
+  overflow: hidden;
+}
+
+.header__img {
+  width: 200px;
+  height: 100px;
+  border-radius: 10%;
+}
+
+/* кнопки */
+.header__a {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+@media (hover: hover) {
+  .header__a:hover {
+    background-color: #0056b3;
+    transform: translateY(-1px);
+  }
+}
+
+.header__a:active {
+  transform: translateY(0);
+}
+
+.header__a:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+@media (max-width: 768px) {
+  .header__main {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__img {
+    margin-bottom: 10px;
+  }
+
+  .header__a {
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+}
