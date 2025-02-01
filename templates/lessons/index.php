@@ -21,28 +21,30 @@
       <div class="main__pages">
         <form action="" method="POST">
           <?php for ($i = 0; $i < $totalPages; $i++): ?>
-           
-            
-              
-              <button type="submit" name="changePage" value="<?= $i + 1 ?>" id="changePage_<?= $i ?>"
-              class="main__page-btn  <?php if ($_SESSION['role'] === 'user'):  ?> disable <?php endif;?>">
-              <?= ($i * $perPage) + 1 ?> - <?= ($i + 1) * $perPage + 1 ?>
+            <button type="submit" name="changePage" value="<?= $i + 1 ?>" id="changePage_<?= $i ?>"
+              class="main__page-btn 
+              <?php if ($_SESSION['role'] === 'user' && empty($accessibleLessonIds)): ?> 
+                disable 
+              <?php endif; ?>">
+                <?= ($i * $perPage) + 1 ?> - <?= ($i + 1) * $perPage ?>
             </button>
           <?php endfor; ?>
         </form>
       </div>
       <ul class="lessons">
-        <?php foreach ($lessons as $lesson): ?>
+        <?php foreach ($allLessons as $lesson): ?>
           <li class="lesson-item">
             <form action="" method="POST">
-              <button name="to_lesson" id="to_lesson" class=" <?php if ($_SESSION['role'] === 'user'):  ?> disable <?php endif;?> button_lesson" value="<?= $lesson['id'] ?>">
-                
-                <?= $lesson['name']; ?>
-                <?php if ($_SESSION['role'] === 'user'):  ?>
-                  <span class="lock_img" ></span>
-                  <?php endif;?>
-              </button>
- 
+              <?php if (in_array($lesson['id'], $accessibleLessonIds) || $_SESSION['role'] === 'admin'): ?>
+                <button name="to_lesson" id="to_lesson" class="button_lesson" value="<?= $lesson['id'] ?>">
+                  <?= htmlspecialchars($lesson['name']); ?>
+                </button>
+              <?php else: ?>
+                <button name="disable_lesson" id="disable_lesson" class="button_lesson" value="<?= $lesson['id'] ?>">
+                  <?= htmlspecialchars($lesson['name']); ?>
+                  <span class="lock_img"></span>
+                </button>
+              <?php endif; ?>
             </form>
           </li>
         <?php endforeach; ?>

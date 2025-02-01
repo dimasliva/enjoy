@@ -1,0 +1,100 @@
+Question: I understand you; Answer: 3
+Question: They live in this country; Answer: 33
+Question: I travel every day; Answer: 3333
+Question: I also think so; Answer: 33
+Question: I speak English; Answer: 333
+Question: I go to work; Answer: 
+Question: I also think so; Answer: 
+Question: I study and work; Answer: 
+Question: I know it very well; Answer: 
+Question: They live in this country; Answer: 
+Question: They live in New York; Answer: 
+Question: I understand it; Answer: 
+Question: I undersand you; Answer: 
+Question: I learn English; Answer: 
+Question: I live in Russia; Answer: 
+Question: I see it; Answer: 
+Question: I understand you very well; Answer: 
+Question: I speak English and Russia; Answer: 
+Question: I also think so; Answer: 
+Question: I like English; Answer: 
+Question: I know; Answer: 
+Question: I learn English online; Answer: 
+Question: I know it; Answer: 
+Question: I like this city; Answer: 
+Question: I want it; Answer: 
+Question: I work; Answer: 
+Question: I see my results; Answer: 
+Question: I stydy; Answer: 
+Question: We understand you; Answer: 
+Question: I work and study; Answer: 
+Question: I like this programm; Answer: 
+Question: You know; Answer: 
+Question: I understand; Answer: 
+Question: I like this video; Answer: 
+Question: I see my result; Answer: 
+Question: I also think so; Answer: 
+Question: You help me; Answer: 
+Question: I know it very well; Answer: 
+Question: I also think so; Answer: 
+Question: I like this place; Answer: 
+Question: We live in this city; Answer: 
+Question: You speak English very well; Answer: 
+Question: I speak Russian; Answer: 
+Question: I really want it; Answer: 
+Question: I really understand this lesson; Answer: 
+Question: I see it very well; Answer: 
+Question: You really help me; Answer: 
+Question: I sometimes think about it; Answer: 
+Question: I think so; Answer: 
+Question: They live there; Answer: 
+Question: I think about it; Answer: 
+Question: We usually buy it there; Answer: 
+Question: I often think about it; Answer: 
+Question: I like music; Answer: 
+Question: I like these things; Answer: 
+Question: I play this game; Answer: 
+Question: I go there; Answer: 
+Question: They also think so; Answer: 
+Question: I often do it; Answer: 
+Question: You work very well; Answer: 
+Question: I do it every day; Answer: 
+Question: I go to school; Answer: 
+Question: I usually buy this thing there; Answer: 
+Question: I buy that thing there; Answer: 
+Question: I usually buy it here; Answer: 
+Question: I read this book; Answer: 
+Question: I read English books; Answer: 
+Question: I read books; Answer: 
+Question: We think so; Answer: 
+Question: They think so; Answer: 
+Question: We think about it; Answer: 
+Question: We often go there; Answer: 
+Question: I often go there; Answer: 
+Question: I sometimes go there; Answer: 
+Question: I also think so; Answer: 
+Question: I also like it; Answer: 
+Question: I also want it; Answer: 
+Question: I travel every year; Answer: 
+Question: I like this language; Answer: 
+Question: I often travel; Answer: 
+Question: I like that language; Answer: 
+Question: We like this place; Answer: 
+Question: I really like that place; Answer: 
+Question: I like this thing; Answer: 
+Question: I like these videos; Answer: 
+Question: I go to work; Answer: 
+Question: I go to this park; Answer: 
+Question: I go to school; Answer: 
+Question: I like english; Answer: 
+Question: I like this practice; Answer: 
+Question: I really like English; Answer: 
+Question: I also think so; Answer: 
+Question: They think so; Answer: 
+Question: I often play this game; Answer: 
+Question: I can help you; Answer: 
+Question: I like this song; Answer: 
+Question: They often play football; Answer: 
+Question: I like travelling; Answer: 
+Question: I often see these things; Answer: 
+Question: I love this place; Answer: 

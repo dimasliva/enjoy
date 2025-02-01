@@ -2,6 +2,8 @@
 *::after,
 *::before {
   box-sizing: border-box;
+  font-size: 16px;
+  box-sizing: border-box;
 }
 
 h1,
@@ -21,8 +23,8 @@ input {
 body {
   margin: 0;
   background-color: black;
-  color: red;
   font-family: "Courier New", Courier, monospace;
+  color: red;
 }
 .container {
   position: relative;
@@ -69,15 +71,17 @@ body {
 
 /* кнопки */
 .header__a {
+  display: inline-block;
   background-color: #007bff;
   color: white;
   border: none;
-  font-size: 16px;
   border-radius: 5px;
   padding: 10px 15px;
-  cursor: pointer;
   text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 @media (hover: hover) {
   .header__a:hover {
@@ -94,6 +98,7 @@ body {
   outline: none;
   box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
+
 @media (max-width: 768px) {
   .header__main {
     flex-direction: column;

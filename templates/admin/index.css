@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+.bg-warning {
+  background-color: #ffbb28;
+}
+tr:hover {
+  background-color: #f1f1f1;
+}
+.mb-4 {
+  margin-bottom: 10px;
+}
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.gap-4 {
+  gap: 10px;
+}
+.form-group {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.edit_form input[type="text"], .edit_form select {
+  padding: 5px;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[name="edit"] {
+  background-color: #4CAF50;
+  color: white;
+}
+
+button[name="delete"] {
+  background-color: #f44336;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+td[colspan="4"] {
+  text-align: center;
+  font-weight: bold;
+}
+
+button[name="accessLesson"] {
+  background-color: #4CAF50;
+  color: white;
+  margin-top: 10px;
+  display: inline-block;
+}

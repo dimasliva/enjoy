@@ -11,8 +11,12 @@ $currentPage = 1;
 $totalPages = ceil($totalLessons / $perPage);
 
 if (isset($_POST['to_lesson'])) {
-    header("Location: " . QUESTION_PAGE['URL'] . '/' . $_POST['to_lesson']);
-    exit(); // Не забудьте добавить exit после header
+    header("Location: " . LESSON_PAGE['URL'] . '/' . $_POST['to_lesson']);
+    exit();
+}
+if (isset($_POST['disable_lesson'])) {
+    header("Location: " . LESSONS_PAGE['URL']);
+    exit();
 }
 
 if (isset($_POST['exit'])) {
@@ -20,15 +24,24 @@ if (isset($_POST['exit'])) {
     $_SESSION['name'] = null;
     $_SESSION['role'] = null;
     header('Location: ' . HOME_PAGE['URL']);
-    exit(); // Не забудьте добавить exit после header
+    exit();
 }
 
+$accessibleLessons = $lessonModel->getLessonsForUser($_SESSION['id'], $perPage, $offset);
+
+$accessibleLessonIds = array_column($accessibleLessons, 'id');
 if (isset($_POST['changePage'])) {
-    $currentPage = (int)$_POST['changePage'];
-    $currentPage = max(1, min($currentPage, $totalPages));
-    $offset = ($currentPage - 1) * $perPage;
+    if (!empty($accessibleLessonIds)  || $_SESSION['role'] === 'admin') {
+        $currentPage = (int) $_POST['changePage'];
+        $currentPage = max(1, min($currentPage, $totalPages));
+        $offset = ($currentPage - 1) * $perPage;
+    } else {
+        header("Location: " . LESSONS_PAGE['URL']);
+        exit();
+    }
 }
+$allLessons = $lessonModel->getAllLessons($perPage, $offset);
 
-$lessons = $lessonModel->getAll($perPage, $offset);
 
 require_once("templates/lessons/index.php");
+

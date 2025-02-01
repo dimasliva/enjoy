@@ -16,7 +16,8 @@
   <header class="header__main">
     <img src="templates/home/img/hacker.jpg" alt="Изображение хакера" class="header__img">
     <nav>
-      <a href="<?= AUTH_PAGE['URL'] ?>" class="header__a">Войти</a>
+    <a href="<?= REGISTER_PAGE['URL'] ?>" class="header__a">Зарегистрироваться</a>
+    <a href="<?= AUTH_PAGE['URL'] ?>" class="header__a">Войти</a>
     </nav>
   </header>
 

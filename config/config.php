@@ -30,10 +30,28 @@ const LESSONS_PAGE = [
     'FILE' => 'action/lessons.php',
     'FOLDER' => '/templates/lessons',
 ];
-const QUESTION_PAGE = [
-    'URL' => '/question',
-    'NAME' => 'Вопросы',
-    'FILE' => 'action/question.php',
-    'FOLDER' => '/templates/question',
+const LESSON_PAGE = [
+    'URL' => '/lesson',
+    'NAME' => 'Урок',
+    'FILE' => 'action/lesson.php',
+    'FOLDER' => '/templates/lesson',
+];
+const REGISTER_PAGE = [
+    'URL' => '/register',
+    'NAME' => 'Регистрация',
+    'FILE' => 'action/register.php',
+    'FOLDER' => '/templates/register',
+];
+const ADMIN_AUTH_PAGE = [
+    'URL' => '/admin/auth',
+    'NAME' => 'Вход в админ панель',
+    'FILE' => 'action/admin_auth.php',
+    'FOLDER' => '/templates/admin_auth',
+];
+const ADMIN_PAGE = [
+    'URL' => '/admin',
+    'NAME' => 'Админ панель',
+    'FILE' => 'action/admin.php',
+    'FOLDER' => '/templates/admin',
 ];
 ?>

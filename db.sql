@@ -12,11 +12,12 @@ CREATE TABLE IF NOT EXISTS lessons (
 
 CREATE TABLE IF NOT EXISTS user_lessons (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    user_id INT,
-    lesson_id INT,
-    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
-    FOREIGN KEY (lesson_id) REFERENCES lessons(id) ON DELETE CASCADE
+    user_id INT NULL,
+    lesson_id INT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE SET NULL,
+    FOREIGN KEY (lesson_id) REFERENCES lessons(id) ON DELETE SET NULL
 );
+
 
 CREATE TABLE IF NOT EXISTS questions (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -33,11 +34,6 @@ CREATE TABLE IF NOT EXISTS answer_questions (
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     FOREIGN KEY (question_id) REFERENCES questions(id) ON DELETE CASCADE
 );
-
-
-INSERT INTO users (name,password, role) VALUES
-('user', 'user', 'admin'),
-('user21', 'user21', 'user');
 
 INSERT INTO lessons (name) VALUES
 ('Lessons 1'),
@@ -340,7 +336,6 @@ INSERT INTO lessons (name) VALUES
 ('Lessons 298'),
 ('Lessons 299'),
 ('Lessons 300');
-
 
 
 INSERT INTO questions (text, lesson_id) VALUES
