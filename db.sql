@@ -9,7 +9,12 @@ CREATE TABLE IF NOT EXISTS lessons (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL
 );
-
+CREATE TABLE IF NOT EXISTS questions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    text TEXT NOT NULL,
+    lesson_id INT ,
+    FOREIGN KEY (lesson_id) REFERENCES lessons(id) ON DELETE CASCADE
+);
 CREATE TABLE IF NOT EXISTS user_lessons (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NULL,
@@ -19,12 +24,7 @@ CREATE TABLE IF NOT EXISTS user_lessons (
 );
 
 
-CREATE TABLE IF NOT EXISTS questions (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    text TEXT NOT NULL,
-    lesson_id INT ,
-    FOREIGN KEY (lesson_id) REFERENCES lessons(id) ON DELETE CASCADE
-);
+
 
 CREATE TABLE IF NOT EXISTS answer_questions (
     id INT AUTO_INCREMENT PRIMARY KEY,

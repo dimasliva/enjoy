@@ -91,12 +91,12 @@ class User
     
     public function login($name, $password)
     {
-        if ($this->isBlocked()) {
-            return [
-                "success" => false,
-                "message" => "Вы заблокированы. Пожалуйста, подождите 5 минут."
-            ];
-        }
+        // if ($this->isBlocked()) {
+        //     return [
+        //         "success" => false,
+        //         "message" => "Вы заблокированы. Пожалуйста, подождите 5 минут."
+        //     ];
+        // }
 
         $sql = "SELECT * FROM users WHERE name=?";
         $stmt = $this->conn->prepare($sql);
@@ -125,6 +125,17 @@ class User
             "data" => [],
             "message" => "Неверное имя пользователя или пароль."
         ];
+    }
+
+    public function changePassword($userId, $newPassword) {
+        $hashedPassword = password_hash($newPassword, PASSWORD_BCRYPT);
+        $sql = "UPDATE users SET password=? where id=?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->bind_param("si", $hashedPassword, $userId);
+
+        $stmt->execute();
+        $stmt->close();
+        return true;
     }
 
     private function isBlocked()

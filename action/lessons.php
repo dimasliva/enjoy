@@ -12,7 +12,6 @@ $totalPages = ceil($totalLessons / $perPage);
 
 if (isset($_POST['to_lesson'])) {
     header("Location: " . LESSON_PAGE['URL'] . '/' . $_POST['to_lesson']);
-    exit();
 }
 if (isset($_POST['disable_lesson'])) {
     header("Location: " . LESSONS_PAGE['URL']);

@@ -6,36 +6,6 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
-.container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.code {
-  pointer-events: none;
-  position: absolute;
-  white-space: nowrap;
-  opacity: 0.8;
-  animation: fall linear infinite;
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(-100%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh);
-    opacity: 0;
-  }
-}
 
 h1 {
   color: black;

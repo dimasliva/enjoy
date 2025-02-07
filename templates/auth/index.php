@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <div class="container"></div>
   <div class="auth-page">
     <div class="auth-page__content">
       <h1 class="auth-page__title">Вход</h1>

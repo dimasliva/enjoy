@@ -11,9 +11,8 @@ $parseUrl = parse_url($_SERVER['REQUEST_URI'])['path'];
 $segments = explode('/', $parseUrl);
 $id = end($segments);
 
-$accessibleLessons = $lessonModel->getLessonsForUser($_SESSION['id'], 1, $id - 1);
+$accessibleLessons = $lessonModel->getLessonsForUser($_SESSION['id'], 300, 0);
 $accessibleLessonIds = array_column($accessibleLessons, 'id');
-
 if ($_SESSION['role'] !== 'admin') {
     if (!in_array($id, $accessibleLessonIds)) {
         header("Location: " . LESSONS_PAGE['URL']);

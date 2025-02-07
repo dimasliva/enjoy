@@ -96,7 +96,6 @@ class Lesson
         $stmt->execute();
         $result = $stmt->get_result();
     
-        // Проверяем, есть ли результат
         if ($row = $result->fetch_assoc()) {
             $stmt->close();
             return $row['id'];
@@ -127,12 +126,30 @@ class Lesson
         $accessLessons = [];
 
         while ($row = $result->fetch_assoc()) {
-            $accessLessons[]= $row;
+            $username = $row['username'];
+            $lessonName = $row['lesson_name'];
+    
+            if (!isset($accessLessons[$username])) {
+                $accessLessons[$username] = [
+                    'lessons' => [],
+                    'id' => $row['id'] 
+                ];
+            }
+            $accessLessons[$username]['lessons'][] = $lessonName;
         }
 
         $stmt->close();
 
-        return $accessLessons;
+        $formattedAccessLessons = [];
+        foreach ($accessLessons as $username => $data) {
+            $formattedAccessLessons[] = [
+                'username' => $username,
+                'lesson_names' => implode(', ', $data['lessons']),
+                'id' => $data['id']
+            ];
+        }
+    
+        return $formattedAccessLessons;
     }
 
     public function getLessonsForUser($userId, $perPage, $offset)

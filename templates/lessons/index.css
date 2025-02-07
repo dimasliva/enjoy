@@ -187,14 +187,18 @@ body {
 .wrapper {
   padding:10px; 
   gap:10px; 
-  width:auto; /* Убедитесь, что ширина адаптируется */
+  width:auto; 
+}
+
+.lock_img {
+  border: 0px;
 }
 
 .header {
   flex-direction:column; 
   align-items:center; 
   padding:15px; 
-  width:auto; /* Убедитесь, что ширина адаптируется */
+  width:auto;
 }
 
 .header__logo-img {
@@ -205,13 +209,13 @@ body {
   flex-direction:row; 
   flex-wrap:wrap; 
   gap:10px; 
-  width:auto; /* Убедитесь, что ширина адаптируется */
+  width:auto; 
 }
 
 .main__page-btn,
 .lesson-item button {
-  flex-basis:auto; /* Изменено для лучшей адаптивности */
-  min-width:auto; /* Изменено для лучшей адаптивности */
+  flex-basis:auto; 
+  min-width:auto;
   margin-bottom:10px; 
   font-size:14px; 
 }
@@ -221,11 +225,6 @@ body {
   gap:5px; 
 }
 
-.lock_img {
-  width:auto;
-  height:auto;
-  margin:auto;
-}
 }
 
 /* для планшета */

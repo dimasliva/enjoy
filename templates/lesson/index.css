@@ -11,25 +11,7 @@ body {
   display: flex;
   flex-direction: column;
 }
-.code {
-  position: absolute;
-  white-space: nowrap;
-  opacity: 0.8;
-  animation: fall linear infinite;
-  font-size: 20px;
-  transform: translateY(0);
-  z-index: -1;
-}
-@keyframes fall {
-  0% {
-    top: -5%;
-    opacity: 1;
-  }
-  100% {
-    top: 710%;
-    opacity: 1;
-  }
-}
+
 
 .wrapper {
   display: flex;

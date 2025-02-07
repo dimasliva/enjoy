@@ -4,7 +4,6 @@ session_start();
 
 $userModel = new User();
 
-print_r($userModel->getLoginAttempts());
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
     $name = $_POST['name'];
     $password = $_POST['password'];
@@ -16,7 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['login'])) {
         $_SESSION['name'] = $loginResult['data']['name'];
         $_SESSION['role'] = $loginResult['data']['role'];
         header("Location: ". ADMIN_PAGE['URL']);
-        exit();
     } else {
         $errorMessage = $loginResult['message'];
     }

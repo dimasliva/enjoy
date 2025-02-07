@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -11,7 +14,8 @@ table {
   margin-bottom: 20px;
 }
 
-th, td {
+th,
+.td_field {
   padding: 12px;
   text-align: left;
   border-bottom: 1px solid #ddd;
@@ -21,49 +25,76 @@ th {
   background-color: #4CAF50;
   color: white;
 }
+
 .bg-warning {
   background-color: #ffbb28;
 }
-tr:hover {
-  background-color: #f1f1f1;
-}
+
 .mb-4 {
   margin-bottom: 10px;
 }
+
+.password_form {
+  display: flex;
+  align-items: center;
+
+  margin-left: 10px;
+  gap: 10px;
+}
+
+.edit_form {
+  display: flex;
+  align-items: center;
+}
+
 .flex {
   display: flex;
 }
+
 .items-center {
   align-items: center;
 }
+
 .gap-4 {
   gap: 10px;
 }
+
 .form-group {
   display: inline-block;
   margin-right: 15px;
 }
 
-.edit_form input[type="text"], .edit_form select {
-  padding: 5px;
+td input[type="text"],
+td input[type="text"],
+.input_field,
+.edit_form select {
+  padding: 10px;
+  border-radius: 5px;
   margin-right: 5px;
   border: 1px solid #ccc;
-  border-radius: 4px;
 }
 
-button {
-  padding: 5px 10px;
+button,
+.change_password,
+.btn_danger,
+.btn_success {
+  padding:  10px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  text-decoration: none;
+  text-align: center;
 }
 
-button[name="edit"] {
+button[name="edit"],
+.change_password,
+.btn_success {
   background-color: #4CAF50;
   color: white;
 }
 
-button[name="delete"] {
+button[name="delete"],
+.btn_danger {
   background-color: #f44336;
   color: white;
 }
@@ -82,4 +113,129 @@ button[name="accessLesson"] {
   color: white;
   margin-top: 10px;
   display: inline-block;
+}
+.user_form__access {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+/* для мобильких устройств */
+@media (max-width: 768px) {
+.td_field {
+  display: none;
+}
+  .user_form {
+    display: flex;
+    flex-direction: column;
+  }
+.user_form__access {
+  flex-direction: row;
+}
+.input_field {
+  margin-right: 0;
+}
+  .user_form .flex {
+    display: flex;
+    flex-direction: column;
+  }
+.wrapper_acces_lessons {
+  background-color: #121212;
+}
+  body {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 10px;
+  }
+
+  .flex {
+    flex-direction: column;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+ 
+  td select,
+  .input_field,
+  td button,
+  td input[type="text"],
+  td input[type="email"],
+  .edit_form select,
+  .user_form__access select,
+  td .input_field,
+  td textarea {
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 1rem;
+    color: white;
+    background-color: #333;
+    border-color: #444;
+  }
+
+  table {
+    background-color: #1e1e1e;
+    width: 100%;
+    border: none;
+    margin-bottom: 1rem;
+    display: flex;
+    overflow-x: auto;
+  }
+  tbody {
+    width: 100vw;
+  }
+  tr {
+    display: flex;
+    flex-direction: column;
+  }
+  td {
+    display: flex;
+    justify-content: center;
+    background-color: #2a2a2a;
+  }
+  th {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .td_field, td .flex  {
+    width: 90vw;
+    text-align: center;
+  }
+  
+  td .flex, td form, td input, td select, td button {
+    width: 100%;
+  }
+
+  th {
+    background-color: #e9ecef;
+    position: relative;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: none;
+  }
+
+  .edit_form,
+.password_form,
+.password_form {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  .td_user_id {
+    display: none;
+  }
+
+  th::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #ddd;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
